@@ -52,3 +52,7 @@ Watching this video, [AWS re:Invent 2015 | (DAT401) Amazon DynamoDB Deep Dive](h
 - Push attributes into GSIs (and LSIs?) to speed up retrieval
 - Sparse indexes don't contain "null" attributes, keeping the size down
 - [Regional replication is now possible](https://aws.amazon.com/about-aws/whats-new/2015/07/amazon-dynamodb-available-now-cross-region-replication-triggers-and-streams/). Done with streams
+
+## Local DynamoDB
+
+Issues with the [local version of DynamoDB](https://github.com/mhart/dynalite#problems-with-amazons-dynamodb-local).
