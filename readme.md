@@ -53,6 +53,18 @@ Watching this video, [AWS re:Invent 2015 | (DAT401) Amazon DynamoDB Deep Dive](h
 - Sparse indexes don't contain "null" attributes, keeping the size down
 - [Regional replication is now possible](https://aws.amazon.com/about-aws/whats-new/2015/07/amazon-dynamodb-available-now-cross-region-replication-triggers-and-streams/). Done with streams
 
+## Issue
+
+- Updating a nested document (map) requires an expression if patch like behaviour is needed.
+- If the above is used, the map (or array) needs to be in place before acting on it.
+- Defaulting to an empty map or array can mitigate this but isn't ideal.
+
 ## Local DynamoDB
+
+Download a [local copy of DynamoDB](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html).
+
+View data locally with [dynamodb-gui](https://www.npmjs.com/package/dynamodb-gui). Requires changes to `/api/common/dynamodb.js` to point to the local endpoint, `http://localhost:8000`.
+
+Start script: `java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb`
 
 Issues with the [local version of DynamoDB](https://github.com/mhart/dynalite#problems-with-amazons-dynamodb-local).
