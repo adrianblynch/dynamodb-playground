@@ -67,6 +67,8 @@ View data locally with [dynamodb-gui](https://www.npmjs.com/package/dynamodb-gui
 
 Start script: `java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb`
 
+Once started, use the [local shell](http://localhost:8000/shell/).
+
 Issues with the [local version of DynamoDB](https://github.com/mhart/dynalite#problems-with-amazons-dynamodb-local).
 
 ## Tools
